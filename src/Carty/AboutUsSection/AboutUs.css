@@ -1,0 +1,178 @@
+.about-us-parent {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  margin: 7rem auto;
+  justify-content: space-between;
+  /* Adding position relative, so that I an add the 2 sliding in animation */
+  position: relative;
+  gap: 3rem;
+}
+.about-us-content-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-us-content-left {
+  width: 45%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.about-us-content-right {
+  width: 35%;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+
+/* Stats section */
+
+.about-us-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 0.8rem */
+  font-family: "Poppins", sans-serif;
+  width: 90%;
+  margin: 0 auto;
+}
+.about-us-stats .actual-card-container div {
+  height: 12rem;
+  width: 18rem;
+  padding: 2rem;
+  /*! FOR ANIMATION */
+  opacity: 0;
+  transform: translateY(100px);
+}
+.about-us-stats .actual-card-container p:nth-child(1) {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+.about-us-stats .actual-card-container p:nth-child(2) {
+  font-size: calc(var(--text-content-base-font-size) * 0.9);
+  width: 60%;
+}
+/*EXTRA SMALL DEVICES*/
+@media (max-width: 575.98px) {
+  .about-us-content-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .about-us-content-left {
+    width: 90%;
+  }
+  .about-us-content-right {
+    width: 90%;
+  }
+
+  .about-us-stats {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .about-us-stats .actual-card-container div {
+    height: 15rem;
+    width: 18rem;
+  }
+  .about-us-stats .actual-card-container p:nth-child(1) {
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+  }
+  .about-us-stats .actual-card-container p:nth-child(2) {
+    font-size: var(--text-content-base-font-size);
+  }
+}
+
+/*SMALL DEVICES ( PORTRAIT TABLETS )*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-us-content-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .about-us-content-left {
+    width: 90%;
+  }
+  .about-us-content-right {
+    width: 90%;
+  }
+  .about-us-stats {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 0.8rem;
+  }
+  .about-us-stats .actual-card-container p:nth-child(1) {
+    font-size: 3rem;
+  }
+  .about-us-stats .actual-card-container p:nth-child(2) {
+    font-size: calc(var(--text-content-base-font-size) * 0.8);
+  }
+  .about-us-stats .actual-card-container div {
+    width: 13rem;
+  }
+}
+
+/*MEDIUM DEVICES ( LANDSCAPE TABLETS )*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .about-us-stats {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 0.8rem;
+  }
+  .about-us-stats .actual-card-container div {
+    height: 12rem;
+    width: 16rem;
+  }
+  .about-us-stats .actual-card-container p:nth-child(1) {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+  }
+}
+
+/*LARGE DEVICES ( LAPTOPS )*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .about-us-stats {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 0.8rem;
+  }
+
+  .about-us-stats .actual-card-container div {
+    height: 17rem;
+    width: 21rem;
+  }
+
+  .about-us-stats .actual-card-container p:nth-child(1) {
+    font-size: 4.5rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+  }
+  .about-us-stats .actual-card-container p:nth-child(2) {
+    font-size: calc(var(--text-content-base-font-size) * 1.1);
+    width: 60%;
+  }
+}
+
+/* EXTRA LARGE DEVICES (LARGE LAPTOPS AND DESKTOPS) */
+@media (min-width: 1200px) {
+}
+
+/* HIGH DEFINITION SCREENS AND LARGE DESKTOPS */
+@media (min-width: 1440px) {
+}

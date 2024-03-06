@@ -1,0 +1,96 @@
+/* <nav>
+      <h1>carty</h1>
+      <ul>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>About Us</li>
+        <li>Faq</li>
+      </ul>
+      <button>Get Started</button>
+    </nav> */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  color: var(--color-inactive);
+  gap: 3.8rem;
+}
+nav ul li {
+  cursor: pointer;
+  transition: var(--transition-timing-function);
+}
+nav ul li:hover {
+  color: #fff;
+}
+nav h1 {
+  color: #fff;
+  font-family: "Inter";
+}
+
+nav button {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--color-inactive-dark);
+  border: none;
+  color: #bbbbbb;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition-timing-function);
+}
+
+nav button:hover {
+  background-color: var(--color-inactive);
+  color: #fff;
+}
+
+/*EXTRA SMALL DEVICES*/
+@media (max-width: 575.98px) {
+  nav {
+    display: none;
+  }
+}
+
+/*SMALL DEVICES ( PORTRAIT TABLETS )*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  nav {
+    display: none;
+  }
+}
+
+/*MEDIUM DEVICES ( LANDSCAPE TABLETS )*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  nav {
+    display: none;
+  }
+}
+
+/*LARGE DEVICES ( LAPTOPS )*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  nav {
+    display: none;
+  }
+}
+
+/* EXTRA LARGE DEVICES (LARGE LAPTOPS AND DESKTOPS) */
+@media (min-width: 1200px) {
+  nav {
+    display: none;
+  }
+  nav button {
+    font-size: calc(var(--text-content-base-font-size) * 1.1);
+  }
+
+  nav h1 {
+    font-size: var(--heading-base-font-size);
+  }
+}
+
+/* HIGH DEFINITION SCREENS AND LARGE DESKTOPS */
+@media (min-width: 1440px) {
+  nav {
+    display: none;
+  }
+}
